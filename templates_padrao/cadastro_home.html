@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pessoas.com</title>
+</head>
+<body>
+	
+	<h1>
+		Pessoas.com
+	</h1>
+
+	<h3>
+		{{ saudacoes }}
+	</h3>
+
+	<P>
+		Escolha uma das opões abaixo:
+	</P>
+	<a href="{% url 'cadastro_lista' %}">
+		<button>
+			Lista de pessoas cadastradas
+		</button>
+	</a>
+	<a href="{% url 'cadastro_novo' %}">
+		<button>
+			Cadastrar novas pessoas
+		</button>
+	</a>
+
+</body>
+</html>

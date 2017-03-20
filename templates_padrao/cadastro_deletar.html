@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<p>
+			Você tem certeza que deseja deletar {{ objeto.nome }} ??
+		</p>
+
+		<a href="{% url 'cadastro_lista' %}">
+			<button type="button">
+				Voltar
+			</button>
+		</a>
+		<button type="submit">
+			Tenho certeza!
+		</button>
+	</form>
+
+</body>
+</html>

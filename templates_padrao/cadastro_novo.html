@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>
+		Pessoas.com
+	</h1>
+	<h3>
+		Cadastro de novas pessoas
+	</h3>
+	<p>
+		Insira as informações que se pede
+	</p>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<a href="{% url 'cadastro_home' %}">
+			<button type="button">
+				Voltar
+			</button>
+		</a>
+		<button type="submit">
+			Salvar
+		</button>
+	</form>
+</body>
+</html>

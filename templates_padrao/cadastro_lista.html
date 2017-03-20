@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cliente cadastrados</title>
+</head>
+<body>
+    
+    <h1>
+        Pessoas.com
+    </h1>
+    
+    <h3>
+        Lista de pessoas cadastradas 
+    </h3>
+    
+    <p>
+    	Selecione uma pessoa para ve-la em detalhes
+    </p>
+    
+    <ol>
+    	{% for c in lista_pessoas %}
+    		<li>
+    			<a href="{% url 'cadastro_detalhe' c.id %}">
+    				{{ c }}
+    			</a>
+    		</li>
+    	{% endfor %}
+    </ol>
+
+    <a href="{% url 'cadastro_home' %}">
+        <button>
+            Voltar
+        </button>
+    </a>
+    <a href="{% url 'cadastro_novo' %}">
+    	<button>
+    		Cadastrar novas pessoas
+    	</button>
+    </a>
+
+    
+
+</body>
+</html>

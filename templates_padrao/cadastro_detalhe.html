@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pessoa.com - Detalhe</title>
+</head>
+<body>
+	<h1>
+		Pessoa.com
+	</h1>
+	<h3>
+		Detalhe da pessoa
+	</h3>
+	<p>
+		<b>Nome: </b>{{ objeto.nome }}
+		<br>
+		<b>Idade: </b>{{ objeto.idade }}
+		<br>
+		<b>Sexo: </b>{{ objeto.sexo }}
+		<br>
+		<b>Endereço: </b>{{ objeto.endereco }}
+		<br>
+		<b>Bairro: </b>{{ objeto.bairro }}
+		<br>
+		<b>CEP: </b>{{ objeto.cep }}
+		<br>
+		<b>Cidade: </b>{{ objeto.cidade }}
+		<br>
+		<b>Estado: </b>{{ objeto.estado }}
+		<br>
+		<b>CPF: </b>{{ objeto.cpf }}
+		<br>
+		<b>RG: </b>{{ objeto.rg }}
+		<br>
+		<b>E-mail: </b>{{ objeto.email }}
+		<br>
+		<b>Data de nascimento: </b>{{ objeto.dtn }}
+		<br>
+		<b>Pessoa salva em: </b>{{ objeto.dts }}
+	</p>
+	<p>
+		<a href="{% url 'cadastro_lista' %}">
+			<button>
+				Voltar
+			</button>
+		</a>
+		<a href="{% url 'cadastro_atualizar' objeto.id %}">
+			<button>
+				Atualizar
+			</button>
+		</a>
+		<a href="{% url 'cadastro_deletar' objeto.id %}">
+			<button>
+				Deletar
+			</button>
+		</a>
+				
+	</p>
+</body>
+</html>

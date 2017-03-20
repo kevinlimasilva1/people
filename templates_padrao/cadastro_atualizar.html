@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>
+		Pessoas.com
+	</h1>
+	<h3>
+		Atualizar informções
+	</h3>
+	<p>
+		Atualize as informações abaixo, logo após clique em salvar
+	</p>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<a href="{% url 'cadastro_lista' %}">
+			<button type="button">
+				Voltar
+			</button>
+		</a>
+		<button type="submit">
+			Salvar
+		</button>
+	</form>
+
+</body>
+</html>
