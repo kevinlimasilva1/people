@@ -1,31 +1,32 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Pessoas.com</title>
+<head class="page_head">
+	<title>Pessoas.com - Home</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
 </head>
-<body>
-	
+<body>	
 	<h1>
 		Pessoas.com
 	</h1>
-
 	<h3>
 		{{ saudacoes }}
 	</h3>
-
 	<P>
 		Escolha uma das opões abaixo:
 	</P>
-	<a href="{% url 'cadastro_lista' %}">
-		<button>
-			Lista de pessoas cadastradas
-		</button>
-	</a>
 	<a href="{% url 'cadastro_novo' %}">
 		<button>
 			Cadastrar novas pessoas
 		</button>
 	</a>
-
+	<a href="{% url 'cadastro_lista' %}">
+		<button>
+			Lista de pessoas cadastradas
+		</button>
+	</a>
 </body>
 </html>

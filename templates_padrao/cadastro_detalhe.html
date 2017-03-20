@@ -1,7 +1,12 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Pessoa.com - Detalhe</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
 </head>
 <body>
 	<h1>
@@ -37,23 +42,20 @@
 		<br>
 		<b>Pessoa salva em: </b>{{ objeto.dts }}
 	</p>
-	<p>
-		<a href="{% url 'cadastro_lista' %}">
-			<button>
-				Voltar
-			</button>
-		</a>
-		<a href="{% url 'cadastro_atualizar' objeto.id %}">
-			<button>
-				Atualizar
-			</button>
-		</a>
-		<a href="{% url 'cadastro_deletar' objeto.id %}">
-			<button>
-				Deletar
-			</button>
-		</a>
-				
-	</p>
+	<a href="{% url 'cadastro_lista' %}">
+		<button>
+			Voltar
+		</button>
+	</a>
+	<a href="{% url 'cadastro_atualizar' objeto.id %}">
+		<button>
+			Atualizar
+		</button>
+	</a>
+	<a href="{% url 'cadastro_deletar' objeto.id %}">
+		<button>
+			Deletar
+		</button>
+	</a>
 </body>
 </html>

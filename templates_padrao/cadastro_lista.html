@@ -1,22 +1,23 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cliente cadastrados</title>
+	<title>Pessoas.com - Cadastrados</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
 </head>
-<body>
-    
+<body>    
     <h1>
         Pessoas.com
-    </h1>
-    
+    </h1>    
     <h3>
         Lista de pessoas cadastradas 
-    </h3>
-    
+    </h3>    
     <p>
     	Selecione uma pessoa para ve-la em detalhes
-    </p>
-    
+    </p>    
     <ol>
     	{% for c in lista_pessoas %}
     		<li>
@@ -26,7 +27,6 @@
     		</li>
     	{% endfor %}
     </ol>
-
     <a href="{% url 'cadastro_home' %}">
         <button>
             Voltar
@@ -37,8 +37,5 @@
     		Cadastrar novas pessoas
     	</button>
     </a>
-
-    
-
 </body>
 </html>
